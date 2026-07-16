@@ -10,7 +10,7 @@
 
             <div class="h-12 w-12 rounded-xl overflow-hidden shadow-lg shadow-blue-200 bg-white border border-slate-100">
                 <img 
-                    src="{{ asset('images/logompc.png ') }}" 
+                    src="{{ asset('images/logo_smk.jpg') }}" 
                     alt="Logo Sekolah"
                     class="h-full w-full object-cover">
             </div>
