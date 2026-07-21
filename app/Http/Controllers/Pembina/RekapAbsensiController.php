@@ -81,7 +81,7 @@ class RekapAbsensiController extends Controller
                 if ($selectedTahunStart == $currentStart) {
 
                     $q->orWhereRaw(
-                        '(? - tahun_masuk) + tingkat_awal BETWEEN 7 AND 9',
+                        '(? - tahun_masuk) + tingkat_awal BETWEEN 10 AND 12',
                         [$selectedTahunStart]
                     );
                 } else {
@@ -351,7 +351,7 @@ class RekapAbsensiController extends Controller
                 if ($selectedTahunStart == $currentStart) {
 
                     $q->orWhereRaw(
-                        '(? - tahun_masuk) + tingkat_awal BETWEEN 7 AND 9',
+                        '(? - tahun_masuk) + tingkat_awal BETWEEN 10 AND 12',
                         [$selectedTahunStart]
                     );
                 } else {
@@ -667,7 +667,7 @@ class RekapAbsensiController extends Controller
         $tingkat = ($tahunAjaranStart - $siswa->tahun_masuk)
             + $siswa->tingkat_awal;
 
-        return ($tingkat >= 7 && $tingkat <= 9)
+        return ($tingkat >= 10 && $tingkat <= 12)
             ? $tingkat
             : null;
     }
@@ -681,7 +681,7 @@ class RekapAbsensiController extends Controller
 
             $kelasAsli = ($tahunAjaranStart - $siswa->tahun_masuk) + $siswa->tingkat_awal;
 
-            if ($kelasAsli > 9) {
+            if ($kelasAsli > 12) {
                 return 'Lulus';
             }
 
@@ -689,9 +689,9 @@ class RekapAbsensiController extends Controller
         }
 
         $label = match ($tingkat) {
-            7 => 'VII',
-            8 => 'VIII',
-            9 => 'IX',
+            10 => 'X',
+            11 => 'XI',
+            12 => 'XII',
             default => '?',
         };
 
@@ -770,7 +770,7 @@ class RekapAbsensiController extends Controller
                     ->orWhere(function ($q2) use ($selectedTahunStart) {
 
                         $q2->whereRaw(
-                            '? BETWEEN tahun_masuk AND (tahun_masuk + (9 - tingkat_awal))',
+                            '? BETWEEN tahun_masuk AND (tahun_masuk + (12 - tingkat_awal))',
                             [$selectedTahunStart]
                         );
                     });

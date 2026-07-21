@@ -65,16 +65,16 @@
                 >
                     <option value="">Semua Kelas</option>
 
-                    <option value="7" {{ $selectedKelas == '7' ? 'selected' : '' }}>
-                        VII
+                    <option value="10" {{ $selectedKelas == '10' ? 'selected' : '' }}>
+                        X
                     </option>
 
-                    <option value="8" {{ $selectedKelas == '8' ? 'selected' : '' }}>
-                        VIII
+                    <option value="11" {{ $selectedKelas == '11' ? 'selected' : '' }}>
+                        XI
                     </option>
 
-                    <option value="9" {{ $selectedKelas == '9' ? 'selected' : '' }}>
-                        IX
+                    <option value="12" {{ $selectedKelas == '12' ? 'selected' : '' }}>
+                        XII
                     </option>
                 </select>
             </div>
@@ -267,9 +267,9 @@
                     @forelse($anggota as $s)
                     @php
                         $tingkatColor = match($s->tingkat_display) {
-                            7 => 'text-blue-600 bg-blue-50',
-                            8 => 'text-emerald-600 bg-emerald-50',
-                            9 => 'text-purple-600 bg-purple-50',
+                            10 => 'text-blue-600 bg-blue-50',
+                            11 => 'text-emerald-600 bg-emerald-50',
+                            12 => 'text-purple-600 bg-purple-50',
                             default => 'text-slate-600 bg-slate-50',
                         };
                     @endphp
@@ -652,9 +652,9 @@
                                     required
                                 >
                                     <option value="">Pilih Kelas</option>
-                                    <option value="7">VII</option>
-                                    <option value="8">VIII</option>
-                                    <option value="9">IX</option>
+                                    <option value="10">X</option>
+                                    <option value="11">XI</option>
+                                    <option value="12">XII</option>
                                 </select>
 
                                 <p class="text-[11px] text-slate-400 ml-1">
@@ -678,7 +678,7 @@
                                 >
 
                                 <p class="text-[11px] text-slate-400 ml-1">
-                                    Tidak perlu menulis VII / VIII / IX
+                                    Tidak perlu menulis X / XI / XII
                                 </p>
                             </div>
 

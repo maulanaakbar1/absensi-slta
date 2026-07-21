@@ -71,16 +71,16 @@
                     class="w-full mt-1 px-4 py-2.5 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-0 transition text-sm font-bold text-slate-700">
                     <option value="">Semua Kelas</option>
 
-                    <option value="7" {{ $selectedKelas == '7' ? 'selected' : '' }}>
-                        VII
+                    <option value="10" {{ $selectedKelas == '10' ? 'selected' : '' }}>
+                        X
                     </option>
 
-                    <option value="8" {{ $selectedKelas == '8' ? 'selected' : '' }}>
-                        VIII
+                    <option value="11" {{ $selectedKelas == '11' ? 'selected' : '' }}>
+                        XI
                     </option>
 
-                    <option value="9" {{ $selectedKelas == '9' ? 'selected' : '' }}>
-                        IX
+                    <option value="12" {{ $selectedKelas == '12' ? 'selected' : '' }}>
+                        XII
                     </option>
                 </select>
             </div>
@@ -322,9 +322,9 @@
                             <td class="px-6 py-5">
                                 @php
                                     $kelasColor = match ($siswa->tingkat_display) {
-                                        7 => 'bg-blue-50 text-blue-600',
-                                        8 => 'bg-emerald-50 text-emerald-600',
-                                        9 => 'bg-purple-50 text-purple-600',
+                                        10 => 'bg-blue-50 text-blue-600',
+                                        11 => 'bg-emerald-50 text-emerald-600',
+                                        12 => 'bg-purple-50 text-purple-600',
                                         default => 'bg-slate-100 text-slate-600',
                                     };
                                 @endphp
