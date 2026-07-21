@@ -5,7 +5,6 @@
 @section('content')
 <div class="max-w-5xl mx-auto py-8 px-4">
 
-    {{-- Tombol Kembali --}}
     <div class="mb-5">
         <a href="{{ route('pembina.anggota.index') }}"
             class="inline-flex items-center gap-2 px-5 py-2.5 rounded-2xl border border-slate-200 bg-white text-slate-600 hover:bg-slate-100 transition font-bold text-sm shadow-sm">
