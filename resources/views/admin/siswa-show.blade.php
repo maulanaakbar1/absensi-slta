@@ -78,7 +78,17 @@
                         {{ $siswa->user->email ?? '-' }}
                     </p>
 
-                    <div class="mt-2 inline-flex px-3 py-1 rounded-xl bg-blue-50 text-blue-600 text-sm font-bold">
+                    @php
+                        $kelasColor = match (true) {
+                            str_contains($kelasDisplay, 'XII') => 'bg-purple-50 text-purple-600',
+                            str_contains($kelasDisplay, 'XI')  => 'bg-emerald-50 text-emerald-600',
+                            str_contains($kelasDisplay, 'X ') || $kelasDisplay === 'X' => 'bg-blue-50 text-blue-600',
+                            $kelasDisplay === 'Lulus' => 'bg-slate-200 text-slate-700',
+                            default => 'bg-slate-100 text-slate-600',
+                        };
+                    @endphp
+
+                    <div class="mt-2 inline-flex px-3 py-1 rounded-xl text-sm font-bold {{ $kelasColor }}">
                         {{ $kelasDisplay }}
                     </div>
 

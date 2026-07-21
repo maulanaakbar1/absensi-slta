@@ -17,7 +17,7 @@
             tahun_masuk: '',
             tingkat_awal: '',
             jurusan: '',
-            jk: 'L',
+            jk: '',
             ekskul: [],
             tingkatan: '',
         }
@@ -52,7 +52,7 @@
                             tahun_masuk: '',
                             tingkat_awal: '',
                             jurusan: '',
-                            jk: 'L',
+                            jk: '',
                             ekskul: [],
                             tingkatan: '',
                         }

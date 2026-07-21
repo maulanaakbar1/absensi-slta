@@ -167,10 +167,13 @@ class SiswaController extends Controller
             $tahunStart
         );
 
+        $tingkatDisplay = $this->getTingkat($siswa, $tahunStart);
+
         return view('admin.siswa-show', compact(
             'siswa',
             'tahunAjaran',
-            'kelasDisplay'
+            'kelasDisplay',
+            'tingkatDisplay'
         ));
     }
 
