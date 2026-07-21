@@ -61,16 +61,16 @@
                             class="w-full border-slate-200 rounded-xl focus:ring-cyan-500">
                             <option value="">Semua Kelas</option>
 
-                            <option value="7" {{ $selectedKelas == '7' ? 'selected' : '' }}>
-                                VII
+                            <option value="10" {{ $selectedKelas == '10' ? 'selected' : '' }}>
+                                X
                             </option>
 
-                            <option value="8" {{ $selectedKelas == '8' ? 'selected' : '' }}>
-                                VIII
+                            <option value="11" {{ $selectedKelas == '11' ? 'selected' : '' }}>
+                                XI
                             </option>
 
-                            <option value="9" {{ $selectedKelas == '9' ? 'selected' : '' }}>
-                                IX
+                            <option value="12" {{ $selectedKelas == '12' ? 'selected' : '' }}>
+                                XII
                             </option>
                         </select>
                     </div>
@@ -227,13 +227,13 @@
                                                 $siswa->kelas_display === 'Lulus'
                                                     => 'bg-slate-200 text-slate-700',
 
-                                                $siswa->tingkat_display == 7
+                                                $siswa->tingkat_display == 10
                                                     => 'bg-blue-50 text-blue-600',
 
-                                                $siswa->tingkat_display == 8
+                                                $siswa->tingkat_display == 11
                                                     => 'bg-emerald-50 text-emerald-600',
 
-                                                $siswa->tingkat_display == 9
+                                                $siswa->tingkat_display == 12
                                                     => 'bg-purple-50 text-purple-600',
 
                                                 default

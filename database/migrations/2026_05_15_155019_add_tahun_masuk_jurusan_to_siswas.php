@@ -30,9 +30,9 @@ return new class extends Migration
             SET jurusan = TRIM(
                 REPLACE(
                     REPLACE(
-                        REPLACE(jurusan, 'X ', ''),
+                        REPLACE(jurusan, 'XII ', ''),
                     'XI ', ''),
-                'XII ', '')
+                'X ', '')
             )
             WHERE jurusan IS NOT NULL
         ");

@@ -103,9 +103,9 @@
                     <select name="kelas" onchange="this.form.submit()"
                         class="w-full mt-1 px-4 py-2.5 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-0 transition text-sm font-bold text-slate-700">
                         <option value="">Semua Kelas</option>
-                        <option value="7" {{ $selectedKelas == '7' ? 'selected' : '' }}>VII</option>
-                        <option value="8" {{ $selectedKelas == '8' ? 'selected' : '' }}>VIII</option>
-                        <option value="9" {{ $selectedKelas == '9' ? 'selected' : '' }}>IX</option>
+                        <option value="10" {{ $selectedKelas == '10' ? 'selected' : '' }}>X</option>
+                        <option value="11" {{ $selectedKelas == '11' ? 'selected' : '' }}>XI</option>
+                        <option value="12" {{ $selectedKelas == '12' ? 'selected' : '' }}>XII</option>
                     </select>
                 </div>
 
@@ -321,9 +321,9 @@
 
                                 $tingkatColor = match (true) {
                                     $s->kelas_display === 'Lulus' => 'text-slate-600 bg-slate-200',
-                                    $tingkat === 7 => 'text-blue-600 bg-blue-50',
-                                    $tingkat === 8 => 'text-emerald-600 bg-emerald-50',
-                                    $tingkat === 9 => 'text-purple-600 bg-purple-50',
+                                    $tingkat === 10 => 'text-blue-600 bg-blue-50',
+                                    $tingkat === 11 => 'text-emerald-600 bg-emerald-50',
+                                    $tingkat === 12 => 'text-purple-600 bg-purple-50',
                                     default => 'text-slate-600 bg-slate-50',
                                 };
                             @endphp
@@ -778,9 +778,9 @@
                                         class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-0 transition"
                                         required>
                                         <option value="">Pilih Tingkat</option>
-                                            <option value="7">VII</option>
-                                            <option value="8">VIII</option>
-                                            <option value="9">IX</option>
+                                            <option value="10">X</option>
+                                            <option value="11">XI</option>
+                                            <option value="12">XII</option>
                                     </select>
 
                                     <p class="text-[10px] text-slate-400 mt-1 ml-1">
@@ -800,7 +800,7 @@
                                         required>
 
                                     <p class="text-[10px] text-slate-400 mt-1 ml-1">
-                                        Tanpa 7 / 8 / 9
+                                        Tanpa 10 / 11 / 12
                                     </p>
                                 </div>
 
